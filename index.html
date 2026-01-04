@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trang test GitHub Pages</title>
+  <style>
+    :root { --bg:#f6f8fb; --card:#ffffff; --accent:#2563eb; --muted:#6b7280; }
+    body { margin:0; font-family:Inter, system-ui, Arial, sans-serif; background:var(--bg); color:#111827; }
+    header { background:linear-gradient(90deg,#eef2ff,#fff); padding:24px 16px; box-shadow:0 1px 0 rgba(0,0,0,0.04); }
+    .container { max-width:900px; margin:28px auto; padding:0 16px; }
+    .card { background:var(--card); border-radius:12px; padding:20px; box-shadow:0 6px 18px rgba(15,23,42,0.06); }
+    h1 { margin:0 0 8px 0; font-size:1.6rem; color:var(--accent); }
+    p.lead { margin:0 0 16px 0; color:var(--muted); }
+    .grid { display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; }
+    .box { flex:1 1 220px; padding:12px; border-radius:8px; background:#fbfdff; border:1px solid #eef2ff; }
+    footer { text-align:center; color:var(--muted); font-size:0.9rem; margin:28px 0 40px 0; }
+    button { background:var(--accent); color:#fff; border:0; padding:8px 12px; border-radius:8px; cursor:pointer; }
+    small { color:var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Test GitHub Pages</h1>
+      <p class="lead">Một trang mẫu để kiểm tra việc hiển thị và deploy trên GitHub Pages.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Giới thiệu</h2>
+      <p>Đây là trang HTML tĩnh đơn giản. Bạn có thể chỉnh sửa nội dung, thêm file markdown hoặc hình ảnh trong repository.</p>
+
+      <div class="grid" aria-hidden="false">
+        <div class="box">
+          <strong>Phiên bản</strong>
+          <div><small>1.0.0</small></div>
+        </div>
+        <div class="box">
+          <strong>Kiểm tra JavaScript</strong>
+          <div style="margin-top:8px;">
+            <button id="btnClick">Nhấn tôi</button>
+            <div id="msg" style="margin-top:8px;color:#065f46;"></div>
+          </div>
+        </div>
+        <div class="box">
+          <strong>Tài nguyên</strong>
+          <div style="margin-top:8px;"><small>README.md; ABOUT.md</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:16px;">
+      <h2>Ví dụ nhúng Markdown</h2>
+      <p>Bạn có thể thêm file markdown như <strong>README.md</strong> hoặc <strong>ABOUT.md</strong> trong repo. GitHub sẽ hiển thị chúng trong giao diện repo, còn GitHub Pages sẽ phục vụ file HTML tĩnh.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© Test GitHub Pages</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('btnClick').addEventListener('click', function () {
+      const msg = document.getElementById('msg');
+      const now = new Date();
+      msg.textContent = 'Đã nhấn lúc ' + now.toLocaleTimeString();
+    });
+  </script>
+</body>
+</html>
